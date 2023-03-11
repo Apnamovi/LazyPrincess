@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'LazyPrincess')
 API_ID = int(environ.get('API_ID', '29576955'))
 API_HASH = environ.get('API_HASH', '79a61b95d1122dd3c95f75f3edecb2e9')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6161344869:AAFLi7zv8vP9RIH4lYtXib_s__ts_-Td6ko")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6161344869:AAFLi7zv8vP9RIH4lY")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -29,13 +29,13 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001637710147').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5554564210').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001765107260')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001647670460')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jk4:jk4@cluster0.smypden.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jmypden.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 

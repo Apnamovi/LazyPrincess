@@ -386,7 +386,6 @@ async def get_shortlink(link):
     url = f'https://shorturllink.in/api'
     params = {'token': URL_SHORTNER_WEBSITE_API,
               'link': link,
-
               }
 
     try:

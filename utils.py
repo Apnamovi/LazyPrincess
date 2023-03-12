@@ -386,7 +386,7 @@ async def get_shortlink(link):
     url = f'https://shorturllink.in/api'
     params = {'token': URL_SHORTNER_WEBSITE_API,
               'link': link,
-              'format': 'json'
+
               }
 
     try:
@@ -394,14 +394,14 @@ async def get_shortlink(link):
             async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
                 data = await response.json(content_type='text/html')
                 if data["status"] == "success":
-                    return data['shortlink']
+                    return data['shortenedUrl']
                 else:
                     logger.error(f"Error: {data['message']}")
-                    return f'https://shorturllink.in/directLink?token={URL_SHORTNER_WEBSITE_API}&link={link}'
+                    return f'https://{URL_SHORTENR_WEBSITE}/api?api={URL_SHORTNER_WEBSITE_API}&link={link}'
 
     except Exception as e:
         logger.error(e)
-        return f'https://shorturllink.in/directLink?token={URL_SHORTNER_WEBSITE_API}&link={link}'
+        return f'{URL_SHORTENR_WEBSITE}/api?api={URL_SHORTNER_WEBSITE_API}&link={link}'
 # _______________________________________________________________________________________________________________ #
 # __________________________________________Credit_______________________________________________________________ #
 # _______________________________________LazyDeveloper___________________________________________________________ #

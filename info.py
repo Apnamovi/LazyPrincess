@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'LazyPrincess')
 API_ID = int(environ.get('API_ID', '29576955'))
 API_HASH = environ.get('API_HASH', '79a61b95d1122dd3c95f75f3edecb2e9')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6161344869:AAFLi7zv8vP9RIH4lY")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6161344869:AAFLi7zv8vH4lY")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -78,7 +78,7 @@ URL_MODE = is_enabled((environ.get("URL_MODE")), True)
 
 # URL Shortener
 URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'https://shorturllink.in')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'f99384c91447757f42025509f4a85612096610a0')
 
 # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 180))

@@ -22,7 +22,7 @@ PORT = environ.get("PORT", "8080")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/68d28011b2bc356b5db01.png')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/2992a480cae2bc0de1c39.jpg https://telegra.ph/file/76e7b5e94430b84a3d2b2.jpg https://telegra.ph/file/3544a8773740b0412c9dd.jpg https://telegra.ph/file/4b1c7004ea8bd3fed8df9.jpg https://telegra.ph/file/a02e47d932adc336740fa.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6284344479').split()]
